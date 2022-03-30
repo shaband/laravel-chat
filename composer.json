@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "abdulrahman/generic-chat",
+    "description": "This is my package generic-chat",
     "keywords": [
-        ":vendor_name",
+        "abdulrahman",
         "laravel",
-        ":package_slug"
+        "generic-chat"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/abdulrahman/generic-chat",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "abdulrahman zaghloul",
+            "email": "abdoabdo20192020@gmail.com",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Abdulrahman\\GenericChat\\": "src",
+            "Abdulrahman\\GenericChat\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Abdulrahman\\GenericChat\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +54,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Abdulrahman\\GenericChat\\GenericChatServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "GenericChat": "Abdulrahman\\GenericChat\\Facades\\GenericChat"
             }
         }
     },
