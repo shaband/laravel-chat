@@ -2,9 +2,9 @@
 
 namespace Abdulrahman\GenericChat\Tests;
 
+use Abdulrahman\GenericChat\GenericChatServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Abdulrahman\GenericChat\GenericChatServiceProvider;
 
 class TestCase extends Orchestra
 {

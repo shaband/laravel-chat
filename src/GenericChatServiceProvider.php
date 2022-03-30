@@ -2,9 +2,9 @@
 
 namespace Abdulrahman\GenericChat;
 
+use Abdulrahman\GenericChat\Commands\GenericChatCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Abdulrahman\GenericChat\Commands\GenericChatCommand;
 
 class GenericChatServiceProvider extends PackageServiceProvider
 {
