@@ -5,13 +5,9 @@ namespace Abdulrahman\GenericChat\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model as Eloquent;
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
-=======
-use Illuminate\Database\Eloquent\Relations\HasMany;
->>>>>>> af308b02c91f4df07fc823532a003560cc28f1e7
 
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Eloquent\SoftDeletes;
