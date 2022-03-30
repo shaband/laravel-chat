@@ -17,7 +17,10 @@ return new class extends Migration
             $table->id();
             $table->integer('conversation_id')->unsigned();
             $table->morphs('person');
-            $table->text('body');
+            $table->text('body')->nullable();
+            $table->string('attachment')->nullable();
+            $table->string('attachment_type')->nullable();
+            $table->time('seen_at')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
