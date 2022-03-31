@@ -14,11 +14,11 @@ class Conversation extends Eloquent
     use SoftDeletes;
 
     /**
-     * The attributes that aren't mass assignable.
+     * The attributes that mass assignable.
      *
      * @var array
      */
-    protected $guarded = ['id'];
+    protected $fillable = ['name'];
 
     /**
      * Get all of the participants for the Conversation

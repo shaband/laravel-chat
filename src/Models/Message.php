@@ -5,6 +5,7 @@ namespace Abdulrahman\GenericChat\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\UploadedFile;
 
@@ -57,7 +58,7 @@ class Message extends Eloquent
      * Get the person record associated with the Message.
      * @return MorphTo
      */
-    public function person()
+    public function person(): MorphTo
     {
         return $this->morphTo();
     }
