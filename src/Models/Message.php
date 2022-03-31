@@ -11,7 +11,8 @@ use Illuminate\Http\UploadedFile;
 
 class Message extends Eloquent
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -25,7 +26,7 @@ class Message extends Eloquent
         'body',
         'attachment',
         'attachment_type',
-        'seen_at'
+        'seen_at',
     ];
 
     /**
@@ -72,7 +73,7 @@ class Message extends Eloquent
     public function setAttachmentAttribute($value = null)
     {
         if ($value && $value instanceof UploadedFile) {
-            $this->attributes['attachment'] =  $value->store($this->path ?? 'uploads');
+            $this->attributes['attachment'] = $value->store($this->path ?? 'uploads');
             // $this->attributes['attachment_type'] = $value->getClientMimeType();
         }
     }
