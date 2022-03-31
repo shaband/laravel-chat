@@ -2,9 +2,10 @@
 
 namespace Abdulrahman\GenericChat\Traits;
 
-use Abdulrahman\GenericChat\Models\{Conversation, Message, Participant};
-use Illuminate\Database\Eloquent\Relations\{MorphMany, MorphToMany};
-
+use Abdulrahman\GenericChat\Models\Message;
+use Abdulrahman\GenericChat\Models\Participant;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 trait Messagable
 {
