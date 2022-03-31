@@ -2,7 +2,7 @@
 
 namespace Abdulrahman\GenericChat\Traits;
 
-use Abdulrahman\GenericChat\Models\{Message, Participant};
+use Abdulrahman\GenericChat\Models\{Conversation, Message, Participant};
 use Illuminate\Database\Eloquent\Relations\{MorphMany, MorphToMany};
 
 
@@ -22,7 +22,6 @@ trait Messagable
      * Participants relationship.
      *
      * @return MorphMany
-     *
      */
     public function participants(): MorphMany
     {
@@ -30,22 +29,12 @@ trait Messagable
     }
 
     /**
-     * Conversation relationship.
+     * Get all of the conversations for the person.
      *
      * @return MorphToMany
-     *
-     * @codeCoverageIgnore
      */
     public function conversations(): MorphToMany
     {
-        return $this
-            ->morphToMany(
-                (Conversation::class),
-                Models::table('participants'),
-                'user_id',
-                'thread_id'
-            )
-            ->whereNull(Models::table('participants') . '.deleted_at')
-            ->withTimestamps();
+        return $this->morphToMany(Conversation::class, 'conversationable', 'conversationables', 'conversationable_id', 'conversation_id');
     }
 }
